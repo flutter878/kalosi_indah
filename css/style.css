@@ -183,14 +183,17 @@ HH				Header
 HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
 .header{
 	height: 100vh;
-	background: linear-gradient(50deg, rgb(81, 255, 182), rgb(87, 160, 255));
-    padding: 45px 0px;
+    min-height: 620px;
+    background: linear-gradient(rgba(7, 25, 35, .62), rgba(7, 25, 35, .62)), url('../img/rak.jpg') center center / cover no-repeat;
+    padding: 45px 0px 0;
+    color: #fff;
 }
 #logo {
 	font-size: 80px;
 	letter-spacing: 10px;
-	font-weight: 100;
+    font-weight: 700;
 	color: white;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, .65);
 	display: inline-block;
 	padding: 0px;
     float: left;
@@ -203,6 +206,42 @@ a#logo:hover{
 }
 .header img{
 	width: 100%;
+}
+.header > .container:last-child,
+.header > .container:last-child .starting,
+.header > .container:last-child .row,
+.header > .container:last-child .col-md-6{
+    height: calc(100vh - 45px);
+    min-height: 575px;
+}
+.header > .container:last-child .col-md-6:first-child{
+    display: none;
+}
+.header > .container:last-child .col-md-6:last-child{
+    width: 100%;
+    float: none;
+    display: table;
+}
+.header .banner-text{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 28px 30px;
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, .8);
+}
+.header .banner-text h2{
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.header .banner-text p{
+    max-width: 620px;
+    margin: 20px auto 30px;
+    color: rgba(255, 255, 255, .92);
+    background: rgba(0, 0, 0, .22);
+    padding: 10px 18px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, .9);
 }
 .store-scene{
     position: relative;
